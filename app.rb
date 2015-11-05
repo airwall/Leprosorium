@@ -13,19 +13,15 @@ before do
 	init_db
 end
 
-# configure do
-# 	db = get_db 										#
-# 	db.execute 'CREATE TABLE IF NOT EXISTS 						
-# 			"Content" 
-# 			(
-# 				"id" INTEGER PRIMARY KEY AUTOINCREMENT, 
-# 				"username" TEXT, 
-# 				"phone" TEXT, 
-# 				"datestamp" TEXT, 
-# 				"barber" TEXT, 
-# 				"color" TEXT
-# 			)'	
-# end
+configure do
+	init_db
+	@db.execute 'CREATE TABLE IF NOT EXISTS "Posts"
+			(
+				"id" INTEGER PRIMARY KEY AUTOINCREMENT, 
+				"created_date" DATE, 
+				"content" TEXT 
+			)'	
+end
 
 
 get '/' do
