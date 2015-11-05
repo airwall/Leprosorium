@@ -1,10 +1,14 @@
+
 <h3>Последние посты</h3>
 
 
 
 <% @result.each do |post| %>
-<div class = "panel panel-default">
-   <div class = "panel-heading">
+<div class="sizes span2 offset6">
+<small><a href="/post/<%= post['id']%>">комментарии</a></small>
+</div>
+<div class = "panel panel-default ">
+   <div class = "sizes span2 offset6">
       <h3 class = "panel-title">
          <p class="text-right"><kbd><%= post['created_date'] %></kbd></p>
       </h3>
@@ -14,5 +18,6 @@
       <p class="text-left"><%= post['content'] %></p>
    </div>
 </div>
+
 <p></p>
 <% end %>
