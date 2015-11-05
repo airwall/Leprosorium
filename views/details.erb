@@ -1,4 +1,3 @@
-<h5>Детали поста</h5>
 
 
 <div class = "panel panel-default ">
@@ -15,10 +14,22 @@
 
 <p></p>
 
-<h4>Комментаий</h4>
+<% @comments.each do |comment| %>
+
+<blockquote>
+  <h5><%= comment['content'] %></h5>
+  <p style ="font-size: 60%; color: #999999">Добавлено <%= comment['created_date'] %></cite>
+</blockquote>
+      
+
+   <%end%>
+
+<h3>Комментаий</h3>
 <div class="col-md-12">
  <form action='/details/<%= @row['id'] %>' method="post" role='form'>
    <textarea class="form-control" rows="5" name='content' placeholder='Ведите текст вашего поста'></textarea>
    </br>
   <button type="submit" class="btn btn-primary ">Submit</button>
 </form></div>
+
+
