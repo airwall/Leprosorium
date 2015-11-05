@@ -14,3 +14,11 @@
 </div>
 
 <p></p>
+
+<h4>Комментаий</h4>
+<div class="col-md-12">
+ <form action='/details/<%= @row['id'] %>' method="post" role='form'>
+   <textarea class="form-control" rows="5" name='content' placeholder='Ведите текст вашего поста'></textarea>
+   </br>
+  <button type="submit" class="btn btn-primary ">Submit</button>
+</form></div>
