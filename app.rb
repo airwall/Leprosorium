@@ -7,6 +7,6 @@ get '/' do
 	erb "Hello!</a>"			
 end
 
-get '/' do
+get '/new' do
 	erb :new	
 end
